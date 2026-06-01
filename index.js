@@ -9,7 +9,7 @@ app.use(express.static('public'));
 
 
 const connection = mysql.createConnection({
-    host: 'contenedorBD',
+    host: process.env.DB_HOST || 'localhost',
     user: 'root',
     password: 'password',
     database: 'base_empleados'

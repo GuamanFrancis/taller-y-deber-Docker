@@ -13,7 +13,9 @@ RUN npm install
 
 COPY . .
 
+ENV DB_HOST=contenedorBD
+
 EXPOSE 3000
 
 
-CMD ["node", "index.js"]
+CMD ["npm", "run", "dev"]
